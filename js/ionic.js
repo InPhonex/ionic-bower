@@ -3747,7 +3747,7 @@ ionic.keyboard = {
    */
   hide: function() {
     if (keyboardHasPlugin()) {
-      cordova.plugins.Keyboard.close();
+      cordova.plugins.Keyboard.hide();
     }
     keyboardActiveElement && keyboardActiveElement.blur();
   },
@@ -4133,7 +4133,7 @@ function keyboardHide() {
   if (ionic.Platform.isAndroid()) {
     // on android closing the keyboard with the back/dismiss button won't remove
     // focus and keyboard can re-appear on subsequent taps (like scrolling)
-    if (keyboardHasPlugin()) cordova.plugins.Keyboard.close();
+    if (keyboardHasPlugin()) cordova.plugins.Keyboard.hide();
     keyboardActiveElement && keyboardActiveElement.blur();
   }
 
