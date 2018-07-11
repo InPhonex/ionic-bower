@@ -3101,9 +3101,9 @@ function tapIgnoreEvent(e) {
     return true;
   }
 
-  // if(e.target.tagName == 'SELECT') {
-  //   return true;
-  // }
+  if(e.target.tagName == 'SELECT') {
+    return true;
+  }
 
   if (ionic.scroll.isScrolling && ionic.tap.containsOrIsTextInput(e.target)) {
     e.preventDefault();
